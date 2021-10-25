@@ -1,0 +1,67 @@
+{
+  "name": "tic-tac-toe",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:e2e": "vue-cli-service test:e2e",
+    "lint": "vue-cli-service lint --fix",
+    "storybook:build": "build-storybook -o ./dist/storybook",
+    "storybook": "start-storybook -p 6006",
+    "storybook:ci": "start-storybook -p 6006 --ci",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "ci:cy:site": "cross-env START_SERVER_AND_TEST_INSECURE=1 start-server-and-test serve http://localhost:8080 cy:run",
+    "cy:storybook": "cypress open -C cypress.storybook.json",
+    "cy:run:storybook": "cypress run --headless -C cypress.storybook.json",
+    "ci:test:storybook": "cross-env START_SERVER_AND_TEST_INSECURE=1 start-server-and-test storybook:ci http://localhost:6006 cy:run:storybook",
+    "test": "npm run ci:cy:site && npm run ci:test:storybook"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@storybook/addon-a11y": "^6.3.12",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-docs": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addons": "^6.3.12",
+    "@storybook/vue": "^6.3.12",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-e2e-cypress": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "cypress": "^8.6.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "lint-staged": "^9.5.0",
+    "start-server-and-test": "^1.14.0",
+    "typescript": "~4.1.5",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}

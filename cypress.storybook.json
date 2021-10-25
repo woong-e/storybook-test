@@ -1,0 +1,8 @@
+{
+  "baseUrl": "http://localhost:6006",
+  "pluginsFile": "tests/storybook-e2e/plugins/index.ts",
+  "reporter": "junit",
+  "reporterOptions": {
+    "mochaFile": "results/cypress-[hash].xml"
+  }
+}
