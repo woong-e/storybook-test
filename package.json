@@ -1,26 +1,17 @@
 {
-  "name": "tic-tac-toe",
+  "name": "storybook-test",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint --fix",
     "storybook:build": "build-storybook -o ./dist/storybook",
-    "storybook": "start-storybook -p 6006",
-    "storybook:ci": "start-storybook -p 6006 --ci",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
-    "ci:cy:site": "cross-env START_SERVER_AND_TEST_INSECURE=1 start-server-and-test serve http://localhost:8080 cy:run",
-    "cy:storybook": "cypress open -C cypress.storybook.json",
-    "cy:run:storybook": "cypress run --headless -C cypress.storybook.json",
-    "ci:test:storybook": "cross-env START_SERVER_AND_TEST_INSECURE=1 start-server-and-test storybook:ci http://localhost:6006 cy:run:storybook",
-    "test": "npm run ci:cy:site && npm run ci:test:storybook"
+    "storybook": "start-storybook -p 6050"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "element-ui": "^2.15.6",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -34,7 +25,6 @@
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
     "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-e2e-cypress": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
@@ -42,7 +32,6 @@
     "@vue/eslint-config-typescript": "^7.0.0",
     "babel-loader": "^8.2.2",
     "cross-env": "^7.0.3",
-    "cypress": "^8.6.0",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
