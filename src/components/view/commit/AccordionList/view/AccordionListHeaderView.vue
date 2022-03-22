@@ -24,35 +24,21 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { Component } from 'vue-property-decorator';
 
-interface Data {
-  items: [],
-  filterOption: string,
-  name: string,
-}
-
-export default Vue.extend({
+@Component
+export default class AccordionListHeaderView extends Vue {
   //
-  data() {
-    const data: Data = {
-      filterOption: 'all',
-      name: '',
-      items: [
-        { value: 'all', text: '전체' },
-        { value: 'group', text: '그룹' },
-        { value: 'project', text: '프로젝트' }
-      ]
-    };
-    return data;
-  },
-  methods: {
-    handleClick() {
-      console.log(this.filterOption, this.name);
-    }
+  filterOption = 'all';
+  name = '';
+  items = [
+    { value: 'all', text: '전체' },
+    { value: 'group', text: '그룹' },
+    { value: 'project', text: '프로젝트' }
+  ];
+
+  handleClick() {
+    console.log(this.filterOption, this.name);
   }
-});
+}
 </script>
-
-<style scoped>
-
-</style>

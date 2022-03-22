@@ -1,5 +1,6 @@
 <template>
   <div>
+    {{ text }}
     <Header />
     <Content />
   </div>

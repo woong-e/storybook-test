@@ -1,3 +1,4 @@
 module.exports = {
-  outputDir: 'dist/vue'
+  outputDir: 'dist/vue',
+  transpileDependencies: ['vuex-module-decorators']
 };

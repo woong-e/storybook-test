@@ -15,25 +15,18 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { Component } from 'vue-property-decorator';
 
-export default Vue.extend({
+import { elementStore } from '../../../../state/ElementModule';
+
+@Component
+export default class AccordionListContentView extends Vue {
   //
-  props: {
-    text: String
-  },
-  data() {
-    return {
-      gitLabProjects: [
-        { value: 'a', text: 'aa', contents: 'aaaa' },
-        { value: 'b', text: 'bb', contents: 'adsaasdf' }
-      ],
-      selected: []
-    };
-  },
-  methods: {}
-});
+  gitLabProjects = [];
+
+  created(): void {
+    console.log('created', elementStore.getGitLabProjects);
+    this.gitLabProjects = [];
+  }
+}
 </script>
-
-<style scoped>
-
-</style>
