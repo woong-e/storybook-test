@@ -10,6 +10,7 @@
     "storybook": "start-storybook -p 6050"
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "core-js": "^3.6.5",
     "element-ui": "^2.15.6",
     "vue": "^2.6.11",
