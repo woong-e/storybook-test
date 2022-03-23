@@ -17,7 +17,7 @@
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
 
-import { elementStore } from '../../../../state/ElementModule';
+// import { elementStore } from '../../../../state/AccordionModule';
 
 @Component
 export default class AccordionListContentView extends Vue {
@@ -25,7 +25,7 @@ export default class AccordionListContentView extends Vue {
   gitLabProjects = [];
 
   created(): void {
-    console.log('created', elementStore.getGitLabProjects);
+    // console.log('created', elementStore.getGitLabProjects);
     this.gitLabProjects = [];
   }
 }

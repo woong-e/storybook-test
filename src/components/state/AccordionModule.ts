@@ -14,7 +14,7 @@ interface Project {
   namespaced: true,
   store
 })
-export default class ElementModule extends VuexModule {
+export default class AccordionModule extends VuexModule {
   //
   gitLabProjects = [
     { value: 'a', text: 'aa', contents: 'aaaa' },
@@ -27,4 +27,4 @@ export default class ElementModule extends VuexModule {
   }
 }
 
-export const elementStore = getModule(ElementModule);
+export const accordionStore = getModule(AccordionModule);
