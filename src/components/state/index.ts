@@ -1,5 +1,2 @@
-import Vuex from 'vuex';
-
-import AccordionModule from './AccordionModule';
-
-export default new Vuex.Store({});
+export { userStore } from './user/UserModule';
+export { default as Store } from './store';

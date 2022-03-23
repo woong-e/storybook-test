@@ -13,7 +13,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 import AxiosView from './view/AxiosView.vue';
 import axios from 'axios';
 
-const url = 'http://localhost:9093/aggregate/loca/user/query';
+const url = 'http://172.20.10.8:9093/aggregate/loca/user/query';
 
 export default Vue.extend({
   components: {
