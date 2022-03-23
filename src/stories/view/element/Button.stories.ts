@@ -4,6 +4,22 @@ import { Button } from '../../../components/view';
 
 const template = '<Button :text="text" />';
 
+export const store = new Vuex.Store({
+  modules: {
+    State: {
+      namespaced: true,
+      state: {
+        text: 'vuex'
+      },
+      getters: {
+        getText: (state) => {
+          return state.text;
+        }
+      }
+    }
+  }
+});
+
 storiesOf('view/element/button', module)
   .add('Default', () => ({
     data: () => ({
@@ -12,15 +28,6 @@ storiesOf('view/element/button', module)
     components: {
       Button
     },
-    template
-    // store: new Vuex.Store({
-    //   modules: {
-    //     element: {
-    //       namespaced: true,
-    //       state: {
-    //         text: 'vuex'
-    //       }
-    //     }
-    //   }
-    // })
+    template,
+    store
   }));

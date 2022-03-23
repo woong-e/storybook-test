@@ -6,5 +6,6 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     '@storybook/addon-docs'
-  ]
+  ],
+  'framework': '@storybook/vue',
 };

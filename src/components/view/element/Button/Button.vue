@@ -5,16 +5,16 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import { mapState } from 'vuex';
+import { Vue, Component, Prop } from 'vue-property-decorator';
 
-export default Vue.extend({
+@Component
+export default class AccordionListHeaderView extends Vue {
   //
-  props: {
-    text: String
-  },
+  @Prop()
+  text!: string
+
   computed: {
     // ...mapState('text', ['text'])
   }
-});
+}
 </script>
