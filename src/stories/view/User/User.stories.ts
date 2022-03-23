@@ -13,10 +13,15 @@ export default {
 const Template: Story<AccordionListProps> = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { User },
-  template: '<User :text="text" />'
+  template: '<User :pageType="pageType" />'
 });
 
-export const Default = Template.bind({});
-Default.args = {
-  text: 'default'
+export const List = Template.bind({});
+List.args = {
+  pageType: 'list'
+};
+
+export const Create = Template.bind({});
+Create.args = {
+  pageType: 'create'
 };
