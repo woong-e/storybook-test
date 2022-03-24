@@ -1,5 +1,5 @@
 import { Story } from '@storybook/vue';
-import { User } from '../../../components/view';
+import { User } from '../../../comp/view';
 
 export type AccordionListProps = {
   text: string;
